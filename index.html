@@ -3,48 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Interview Report Atlas</title>
+    <title>Interview Report — Control Panel</title>
     <meta
       name="description"
-      content="将 Interview Report 重构为 Flat Design 风格的叙事型网站，完整覆盖报告章节、推理路径与附录原文。"
+      content="将 Interview Report 重构为拟物化（Skeuomorphism）风格的沉浸式控制面板界面，模拟真实设备操作体验。"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
     <script src="./main.js" defer></script>
   </head>
   <body>
-    <div class="page-noise" aria-hidden="true"></div>
-    <div class="page-vignette" aria-hidden="true"></div>
+    <!-- 全局纹理层 -->
+    <div class="tex-noise" aria-hidden="true"></div>
+    <div class="tex-vignette" aria-hidden="true"></div>
 
-    <div class="site-shell">
-      <header class="topbar" id="top">
-        <a class="library-mark" href="#top" aria-label="返回页首">
-          <span class="library-mark__crest" aria-hidden="true">✶</span>
-          <span class="library-mark__text">
-            <strong>Interview Atlas</strong>
-            <span>Flat Narrative Edition</span>
+    <div class="chassis">
+      <!-- 顶部金属条 -->
+      <header class="rack-bar" id="top">
+        <div class="rack-bar__brand">
+          <span class="led led--green" aria-hidden="true"></span>
+          <span class="brand-label">
+            <strong>INTERVIEW ATLAS</strong>
+            <span>SKEUOMORPH CONTROL PANEL</span>
           </span>
-        </a>
+        </div>
 
-        <nav class="topnav" aria-label="页面导航">
-          <a href="#overview">总览</a>
-          <a href="#scene">场景</a>
-          <a href="#product">角色</a>
-          <a href="#trust">信任</a>
-          <a href="#method">方法</a>
-          <a href="#appendix">附录</a>
+        <nav class="rack-nav" aria-label="面板导航">
+          <a href="#overview" class="knob-link">总览</a>
+          <a href="#scene" class="knob-link">场景</a>
+          <a href="#product" class="knob-link">角色</a>
+          <a href="#trust" class="knob-link">信任</a>
+          <a href="#method" class="knob-link">方法</a>
+          <a href="#appendix" class="knob-link">附录</a>
         </nav>
       </header>
 
+      <!-- 主面板区 -->
       <main id="app"></main>
 
-      <footer class="site-footer">
-        <p>Built from the original report and redesigned as a flat, structured narrative interface.</p>
+      <!-- 底部铭牌 -->
+      <footer class="chassis-footer">
+        <div class="nameplate">
+          <span class="screw" aria-hidden="true"></span>
+          <p>Built from the original report · Redesigned as a skeuomorphic control panel interface</p>
+          <span class="screw" aria-hidden="true"></span>
+        </div>
       </footer>
     </div>
   </body>
