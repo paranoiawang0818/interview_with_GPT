@@ -283,13 +283,13 @@ function renderPage() {
   app.innerHTML = `
     <section class="hero">
       <article class="hero-copy ornate-frame" data-pane="[ BOOT // INTERVIEW_REPORT ]">
-        <span class="eyebrow">Volume 0 · Boot Sequence</span>
+        <span class="eyebrow">Report Overview</span>
         <h1 class="hero-title">在申研与创业之间，<span class="accent">用 AI 理解情绪</span>是否值得成为长期主线？</h1>
-        <p class="hero-lead dropcap">这不是一份把报告内容堆成页面的展示稿，而是将原文重组为一套可浏览的终端叙事系统。页面仍完整保留原报告的推理链条，只是把阅读体验改写成更接近命令行、状态面板与系统日志的视觉语法。</p>
+        <p class="hero-lead dropcap">这不是一份把报告内容直接堆成页面的展示稿，而是将原文重组为一套更清晰、更现代的平面叙事界面。页面完整保留原报告的推理链条，同时用色块、网格和字体层级来建立阅读节奏。</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#overview">INIT</a>
-          <a class="button button-secondary" href="./Interview%20Report.pdf">OPEN PDF</a>
-          <a class="button button-ghost" href="#appendix">READ ARCHIVE</a>
+          <a class="button button-primary" href="#overview">开始阅读</a>
+          <a class="button button-secondary" href="./Interview%20Report.pdf">下载 PDF</a>
+          <a class="button button-ghost" href="#appendix">查看资源</a>
         </div>
         <div class="ornate-divider" aria-hidden="true"></div>
         <div class="stats">
@@ -300,25 +300,25 @@ function renderPage() {
         </div>
       </article>
       <aside class="hero-rail">
-        <div class="rail-card panel" data-pane="[ STATUS // PRIMARY_QUERY ]">
+        <div class="rail-card panel" data-pane="PRIMARY QUESTION">
           <div class="wax-seal" aria-hidden="true">AI</div>
-          <span class="card-kicker">System Index</span>
+          <span class="card-kicker">Core Thesis</span>
           <h3>这份报告的真正对象，不是产品，而是问题意识。</h3>
           <p>核心命题最终被收束为：如何让 AI 基于上下文真正理解用户不良情绪，并给出贴合需求的回应，而不是停留在模板化共情与表层安慰。</p>
         </div>
-        <div class="rail-card panel" data-pane="[ LOG // INPUT_SCOPE ]">
-          <span class="card-kicker">Input Summary</span>
-          <p>source=Interview Report.pdf</p>
-          <p>mode=terminal narrative</p>
-          <p>coverage=all sections + appendix</p>
-          <p>media=disabled</p>
+        <div class="rail-card panel" data-pane="PROJECT SCOPE">
+          <span class="card-kicker">Project Summary</span>
+          <p>内容来源：Interview Report.pdf</p>
+          <p>设计风格：Flat Design</p>
+          <p>覆盖范围：全部章节与资源入口</p>
+          <p>交付方式：单页叙事网站</p>
         </div>
       </aside>
     </section>
 
     <section class="proclamation">
-      <div class="panel panel-center ornate-frame" data-pane="[ MAP // REASONING_ORDER ]">
-        <span class="eyebrow">System Notice</span>
+      <div class="panel panel-center ornate-frame" data-pane="REASONING ORDER">
+        <span class="eyebrow">Structure</span>
         <h2 class="proclamation-title">这份网站的结构，遵循报告的思考顺序，而不是常规产品宣传顺序。</h2>
         <div class="ornate-divider" aria-hidden="true"></div>
         <p class="proclamation-copy dropcap">页面先追问“为什么是这个方向”，再回答“为什么是这类人”，接着才进入产品角色、伦理边界、能力路线、研究问题、信任机制与最终结论。这样处理是为了忠实保留报告的推理逻辑，也让整站不至于变成脱离原文的概念包装。</p>
@@ -327,15 +327,15 @@ function renderPage() {
 
     <section class="section">
       <div class="two-col">
-        <div class="section-card" data-pane="[ INDEX // WINDOW_MAP ]">
+        <div class="section-card" data-pane="SECTION MAP">
           <div class="section-title-wrap">
             <span class="volume-label">Volume I</span>
           </div>
           <h2 class="section-title">卷册目录</h2>
           <p class="section-lead">每一卷都对应报告中的一个关键转折点。前半部回答“为什么值得做”，后半部回答“怎样才配做、怎样才不越界”。</p>
         </div>
-        <aside class="toc-card" data-pane="[ NAV // WINDOW_LIST ]">
-          <span class="summary-label">Table of Windows</span>
+        <aside class="toc-card" data-pane="SECTION LIST">
+          <span class="summary-label">Table of Sections</span>
           <div class="toc-list">
             ${sections
               .map(
@@ -359,8 +359,8 @@ function renderPage() {
 
     <section class="section" id="appendix">
       <div class="archive-layout">
-        <aside class="meta-card" data-pane="[ META // ARCHIVE_STATUS ]">
-          <span class="meta-label">Archive Ledger</span>
+        <aside class="meta-card" data-pane="APPENDIX RESOURCES">
+          <span class="meta-label">Resources</span>
           <h3>完整附录</h3>
           <p class="meta-copy">附录区现在仅保留资源入口。你可以直接下载原版报告 PDF，或跳转查看完整对话内容。</p>
           ${renderAppendixLinks()}
