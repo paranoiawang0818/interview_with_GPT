@@ -3,19 +3,19 @@
 :root {
   /* --- 金属面板色系 --- */
   --chassis-bg: #1a1a1e;
-  --panel-dark: #232328;
-  --panel-mid: #2c2c32;
-  --panel-light: #38383f;
-  --panel-highlight: #4a4a52;
+  --panel-dark: #2a2a30;
+  --panel-mid: #363640;
+  --panel-light: #44444e;
+  --panel-highlight: #55555f;
   --groove: #141417;
 
   /* --- 材质色 --- */
   --metal-cold: #3a3d45;
   --metal-warm: #4e4e56;
-  --leather-bg: #2e2519;
-  --leather-light: #3d3225;
-  --wood-bg: #3e2f1e;
-  --wood-light: #5a4530;
+  --leather-bg: #3a2e1e;
+  --leather-light: #4d3e2c;
+  --wood-bg: #4a3824;
+  --wood-light: #6a5238;
 
   /* --- 指示灯 --- */
   --led-green: #39ff14;
@@ -25,10 +25,10 @@
   --led-off: #333;
 
   /* --- 文字 --- */
-  --text-primary: #e8e6e1;
-  --text-secondary: #a09d96;
-  --text-dim: #6b6862;
-  --text-label: #c8c4bb;
+  --text-primary: #f0eeea;
+  --text-secondary: #bbb8b0;
+  --text-dim: #8a8680;
+  --text-label: #d5d1c8;
   --text-engrave: rgba(0,0,0,0.6);
 
   /* --- 高光与阴影 --- */
@@ -140,7 +140,7 @@ img { display: block; max-width: 100%; }
 /* --- LED 指示灯 --- */
 .led {
   display: inline-block;
-  width: 10px; height: 10px;
+  width: 12px; height: 12px;
   border-radius: 50%;
   border: 1px solid rgba(0,0,0,0.5);
   box-shadow: inset 0 1px 2px rgba(0,0,0,0.4);
@@ -150,31 +150,32 @@ img { display: block; max-width: 100%; }
   background: var(--led-green);
   box-shadow:
     inset 0 1px 2px rgba(0,0,0,0.3),
-    0 0 6px rgba(57,255,20,0.5),
-    0 0 16px rgba(57,255,20,0.2);
+    0 0 8px rgba(57,255,20,0.6),
+    0 0 20px rgba(57,255,20,0.3);
 }
 
 .led--amber {
   background: var(--led-amber);
   box-shadow:
     inset 0 1px 2px rgba(0,0,0,0.3),
-    0 0 6px rgba(255,191,0,0.5),
-    0 0 16px rgba(255,191,0,0.2);
+    0 0 8px rgba(255,191,0,0.6),
+    0 0 20px rgba(255,191,0,0.3);
 }
 
 .led--red {
   background: var(--led-red);
   box-shadow:
     inset 0 1px 2px rgba(0,0,0,0.3),
-    0 0 6px rgba(255,59,48,0.5);
+    0 0 8px rgba(255,59,48,0.6),
+    0 0 20px rgba(255,59,48,0.3);
 }
 
 .led--blue {
   background: var(--led-blue);
   box-shadow:
     inset 0 1px 2px rgba(0,0,0,0.3),
-    0 0 6px rgba(0,191,255,0.5),
-    0 0 16px rgba(0,191,255,0.2);
+    0 0 8px rgba(0,191,255,0.6),
+    0 0 20px rgba(0,191,255,0.3);
 }
 
 .led--off {
@@ -237,11 +238,13 @@ img { display: block; max-width: 100%; }
   padding: 32px;
   border-radius: var(--radius-lg);
   background: linear-gradient(180deg, var(--panel-mid) 0%, var(--panel-dark) 100%);
-  border-top: 1px solid var(--bevel-light);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(255,255,255,0.15);
   border-bottom: 2px solid var(--groove);
   box-shadow:
-    0 4px 16px var(--outer-shadow),
-    inset 0 1px 0 var(--bevel-light),
+    0 6px 24px rgba(0,0,0,0.7),
+    0 1px 0 rgba(255,255,255,0.08),
+    inset 0 1px 0 rgba(255,255,255,0.08),
     inset 0 -1px 0 rgba(0,0,0,0.3);
   overflow: hidden;
 }
@@ -262,9 +265,9 @@ img { display: block; max-width: 100%; }
   gap: 10px;
   margin-bottom: 20px;
   padding: 10px 16px;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0,0,0,0.4);
   border-radius: var(--radius-sm);
-  border: 1px solid rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.14em;
@@ -280,11 +283,13 @@ img { display: block; max-width: 100%; }
   padding: 32px;
   border-radius: var(--radius-lg);
   background: linear-gradient(180deg, var(--leather-light) 0%, var(--leather-bg) 100%);
-  border-top: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-top: 1px solid rgba(255,255,255,0.12);
   border-bottom: 2px solid #1a1408;
   box-shadow:
-    0 4px 16px var(--outer-shadow),
-    inset 0 1px 0 rgba(255,255,255,0.05);
+    0 6px 24px rgba(0,0,0,0.7),
+    0 1px 0 rgba(200,170,120,0.1),
+    inset 0 1px 0 rgba(255,255,255,0.06);
 }
 
 .leather-panel::before {
@@ -302,11 +307,13 @@ img { display: block; max-width: 100%; }
   padding: 32px;
   border-radius: var(--radius-lg);
   background: linear-gradient(180deg, var(--wood-light) 0%, var(--wood-bg) 100%);
-  border-top: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-top: 1px solid rgba(255,255,255,0.12);
   border-bottom: 2px solid #2a1e10;
   box-shadow:
-    0 4px 16px var(--outer-shadow),
-    inset 0 1px 0 rgba(255,255,255,0.04);
+    0 6px 24px rgba(0,0,0,0.7),
+    0 1px 0 rgba(180,140,80,0.1),
+    inset 0 1px 0 rgba(255,255,255,0.05);
 }
 
 .wood-panel::before {
@@ -330,14 +337,14 @@ img { display: block; max-width: 100%; }
   position: relative;
   padding: 32px;
   border-radius: var(--radius-lg);
-  background: linear-gradient(180deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: linear-gradient(180deg, rgba(255,255,255,0.09) 0%, rgba(255,255,255,0.03) 100%);
+  border: 1px solid rgba(255,255,255,0.15);
   box-shadow:
-    0 4px 20px rgba(0,0,0,0.4),
-    inset 0 1px 0 rgba(255,255,255,0.1),
-    inset 0 0 30px rgba(255,255,255,0.02);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+    0 6px 24px rgba(0,0,0,0.5),
+    inset 0 1px 0 rgba(255,255,255,0.15),
+    inset 0 0 40px rgba(255,255,255,0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 /* ===== 螺丝装饰 ===== */
@@ -638,8 +645,8 @@ img { display: block; max-width: 100%; }
 
 .toc-item {
   border-radius: var(--radius-md);
-  background: rgba(0,0,0,0.3);
-  border: 1px solid rgba(255,255,255,0.04);
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.07);
   transition: all 120ms ease;
 }
 
@@ -733,15 +740,15 @@ img { display: block; max-width: 100%; }
 .sub-panel {
   padding: 20px;
   border-radius: var(--radius-md);
-  background: rgba(0,0,0,0.3);
-  border: 1px solid rgba(255,255,255,0.04);
-  border-top: 1px solid rgba(255,255,255,0.06);
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-top: 1px solid rgba(255,255,255,0.1);
   transition: all 150ms ease;
 }
 
 .sub-panel:hover {
-  border-color: rgba(255,255,255,0.1);
-  box-shadow: inset 0 0 20px rgba(255,255,255,0.02);
+  border-color: rgba(255,255,255,0.16);
+  box-shadow: inset 0 0 24px rgba(255,255,255,0.03), 0 0 12px rgba(0,191,255,0.06);
 }
 
 .sub-panel strong {
@@ -814,8 +821,8 @@ img { display: block; max-width: 100%; }
   gap: 14px;
   padding: 14px 18px;
   border-radius: var(--radius-md);
-  background: rgba(0,0,0,0.25);
-  border: 1px solid rgba(255,255,255,0.04);
+  background: rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.07);
   font-size: 15px;
   color: var(--text-secondary);
 }
