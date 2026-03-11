@@ -1,0 +1,13 @@
+{
+  "name": "interview-report-site",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "extract:pdf": "node scripts/extract-pdf.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "pdf-parse": "^2.4.5"
+  }
+}
