@@ -1,112 +1,108 @@
 # 🎛️ Interview Atlas — Skeuomorphic Control Panel
 
-> 把一份真实的访谈报告，重构成一台你想动手操作的拟物化控制面板。
+> Reimagining an authentic interview report as a skeuomorphic control panel you’ll want to reach out and operate.
 
 <br>
 
-## ✨ 这是什么？
+## ✨ What is this?
 
-这不是又一个"把文字贴到网页上"的项目。
+This isn't just another project that simply "pastes text onto a webpage."
 
-它的原始素材是一份深度访谈报告——关于一个人如何在申研、创业和自我价值之间做选择，以及 **用 AI 理解情绪** 是否值得成为长期主线。
+Its source material is an in-depth interview report—exploring how one individual navigated the choices between pursuing graduate studies, launching a startup, and defining their own self-worth; specifically, it examines whether **using AI to understand emotions** is a worthy pursuit to serve as a long-term guiding mission.
 
-我们把这份报告的完整推理链条拆解为 **14 个叙事卷册**，然后用拟物化（Skeuomorphism）设计语言重新组装：金属面板、皮革质感、木纹底座、LED 指示灯、凹槽分割线、螺丝铭牌……每一个视觉元素都在模拟真实设备的触感。
-
-**📖 [在线阅读 → GitHub Pages](https://paranoiawang0818.github.io/interview_with_GPT/)**
+We deconstructed the report's entire chain of reasoning into **14 narrative modules**, then reassembled them using a skeuomorphic design language: metal panels, leather textures, wood-grain bases, LED indicators, recessed dividers, screw-fastened nameplates... every visual element is crafted to simulate the tactile sensation of a real-world device. **📖 [Read Online → GitHub Pages](https://paranoiawang0818.github.io/interview_with_GPT/)**
 
 <br>
 
-## 🖥️ 预览
+## 🖥️ Preview
 
-| 区域 | 描述 |
+| Section | Description |
 |------|------|
-| 🟢 **Hero 仪表盘** | 主标题 + 四组数据仪表 + 三枚操作按钮 |
-| 🟠 **卷册目录** | 14 卷完整索引，点击即跳转 |
-| 🔵 **内容面板** | 金属 / 皮革 / 木纹三种材质交替呈现 |
-| 🔴 **附录资源** | 一键下载原版 PDF / 跳转完整对话记录 |
+| 🟢 **Hero Dashboard** | Main Title + Four Data Gauges + Three Control Buttons |
+| 🟠 **Volume Directory** | Complete Index of 14 Volumes; Click to Navigate |
+| 🔵 **Content Panel** | Alternating display of three material textures: Metal, Leather, and Wood Grain |
+| 🔴 **Appendix Resources** | One-click download of original PDF / Link to full conversation logs |
 
 <br>
 
-## 📂 项目结构
+## 📂 Project Structure
 
 ```
 interview_with_GPT/
-├── index.html          # 页面骨架（拟物化控制面板布局）
-├── styles.css          # 全部样式（材质纹理 / LED / 按钮 / 面板）
-├── main.js             # 数据 + 渲染逻辑（14 卷内容动态生成）
-├── Interview Report.pdf  # 原版访谈报告
+├── index.html          # Page Skeleton (Skeuomorphic Control Panel Layout)
+├── styles.css          # All Styles (Material Textures / LEDs / Buttons / Panels)
+├── main.js             # Data + Rendering Logic (Dynamic generation of 14 volumes of content)
+├── Interview Report.pdf  # Original Interview Report
 └── .gitignore
 ```
 
 <br>
 
-## 🎨 设计亮点
+## 🎨 Design Highlights
 
-🔩 **真实材质感** — 金属拉丝、皮革压纹、木纹底板，三种面板材质交替出现，避免视觉疲劳
+🔩 **Realistic Material Textures** — Brushed metal, embossed leather, and wood-grain backplates; three panel materials alternate to prevent visual fatigue.
 
-💡 **LED 指示灯系统** — 绿 / 琥珀 / 蓝 / 红四色循环，每个章节和卡片都有独立状态灯
+💡 **LED Indicator System** — A four-color cycle (Green / Amber / Blue / Red); each chapter and card features its own independent status light.
 
-⚙️ **机架式布局** — 顶部金属导航条 + 底部螺丝铭牌，整体模拟 19 英寸设备机架
+⚙️ **Rack-Mount Layout** — A top-mounted metal navigation bar paired with bottom-mounted screw-and-nameplate details, simulating the overall look of a standard 19-inch equipment rack.
 
-🎚️ **按钮物理反馈** — 鼠标按下时按钮下沉 2px，松开回弹，模拟实体开关手感
+🎚️ **Tactile Button Feedback** — Buttons depress by 2px upon mouse-down and spring back upon release, simulating the tactile feel of physical switches.
 
-📐 **凹槽分割线** — 用 inset shadow 模拟金属面板上的铣削凹槽
+📐 **Recessed Dividers** — Uses `inset shadow` effects to simulate milled grooves on a metal panel surface.
 
-🌫️ **全局噪点纹理** — SVG 噪点叠加 + 暗角渐变，营造真实设备表面的颗粒感
+🌫️ **Global Noise Texture** — An SVG noise overlay combined with a vignette gradient creates a subtle graininess, simulating the surface texture of real-world equipment.
 
 <br>
 
-## 📚 内容结构（14 卷）
+## 📚 Content Structure (14 Volumes)
 
-| 卷 | 主题 | 核心问题 |
+| Vol. | Topic | Core Questions | |
 |----|------|----------|
-| I | 访谈背景 | 为什么不是从一个创业点子出发？ |
-| II | 核心问题 | 未来 3–5 年最想得到什么？ |
-| III | 人群聚焦 | 谁是真正要帮助的人？ |
-| IV | 产品角色 | 它应该是什么，不应该是什么？ |
-| V | 替代方案 | 为什么不是朋友、日记或普通 AI？ |
-| VI | 对话修正 | 共鸣的边界在哪里？ |
-| VII | 伦理底线 | 数字分身绝对不能做的三件事 |
-| VIII | 成长路线 | 必须补齐哪三类能力？ |
-| IX | 申研定位 | 理想的申请者身份是什么？ |
-| X | 研究问题 | 未来 3 年最想死磕什么？ |
-| XI | 有效性判断 | 怎样才算「真的有效」？ |
-| XII | 数据与信任 | 如何不背叛用户的信任？ |
-| XIII | 思维框架 | Design Thinking × Critical Thinking |
-| XIV | 最终结论 | 这条路值不值得走？ |
+| I | Interview Context | Why not start with a startup idea? |
+| II | Core Question | What do you most want to achieve in the next 3–5 years? |
+| III | Target Audience | Who are the people you truly want to help? |
+| IV | Product Role | What should it be, and what should it *not* be? |
+| V | Alternatives | Why not a friend, a diary, or a standard AI? |
+| VI | Dialogue Refinement | Where do the boundaries of empathy lie? |
+| VII | Ethical Bottom Line | Three things a digital avatar absolutely must *not* do |
+| VIII | Growth Roadmap | Which three types of skills must be acquired? |
+| IX | Research Focus | What is the ideal profile for an applicant? |
+| X | Research Questions | What specific problems do you want to tackle head-on in the next 3 years? |
+| XI | Effectiveness Criteria | What constitutes "truly effective"? |
+| XII | Data & Trust | How do you avoid betraying user trust? |
+| XIII | Conceptual Framework | Design Thinking × Critical Thinking |
+| XIV | Final Conclusion | Is this path worth pursuing? |
 
 <br>
 
-## 🚀 本地运行
+## 🚀 Running Locally
 
-无需安装任何依赖，直接用浏览器打开即可：
+No dependencies to install—simply open directly in your browser:
 
 ```bash
-# 克隆仓库
+# Clone the repository
 git clone https://github.com/paranoiawang0818/interview_with_GPT.git
 
-# 打开页面
+# Open the page
 open interview_with_GPT/index.html
-# Windows 用户：
+# For Windows users:
 start interview_with_GPT/index.html
 ```
 
 <br>
 
-## 🛠️ 技术栈
+## 🛠️ Tech Stack
 
-- **HTML / CSS / Vanilla JS** — 零框架，零构建工具，打开即用
-- **Google Fonts** — Orbitron（仪表盘数字）+ Share Tech Mono（标签）+ Inter（正文）
-- **纯 CSS 材质模拟** — 所有纹理、光影、凹凸效果均由 CSS 渐变与阴影实现，无图片依赖
+- **HTML / CSS / Vanilla JS** — Zero frameworks, zero build tools; just open and use
+- **Google Fonts** — Orbitron (dashboard digits) + Share Tech Mono (labels) + Inter (body text)
+- **Pure CSS Material Simulation** — All textures, lighting, and embossed effects are achieved solely through CSS gradients and shadows; no image assets required
 
 <br>
 
 ## 📄 License
 
-本项目内容基于真实访谈报告整理，仅供学习与展示用途。
+The content of this project is compiled based on a real interview report and is intended strictly for educational and demonstration purposes. ---
 
----
-
-<p align="center">
-  <sub>🔧 Built with care · Designed as a skeuomorphic control panel · 2026</sub>
+<p align="center"> 
+<sub>🔧 Built with care · Designed as a skeuomorphic control panel · 2026</sub>
 </p>
