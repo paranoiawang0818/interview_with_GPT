@@ -54,24 +54,6 @@ interview_with_GPT/
 
 <br>
 
-## 📚 Content Structure (14 Volumes)
-
-| Vol. | Topic | Core Questions | |
-|----|------|----------|
-| I | Interview Context | Why not start with a startup idea? |
-| II | Core Question | What do you most want to achieve in the next 3–5 years? |
-| III | Target Audience | Who are the people you truly want to help? |
-| IV | Product Role | What should it be, and what should it *not* be? |
-| V | Alternatives | Why not a friend, a diary, or a standard AI? |
-| VI | Dialogue Refinement | Where do the boundaries of empathy lie? |
-| VII | Ethical Bottom Line | Three things a digital avatar absolutely must *not* do |
-| VIII | Growth Roadmap | Which three types of skills must be acquired? |
-| IX | Research Focus | What is the ideal profile for an applicant? |
-| X | Research Questions | What specific problems do you want to tackle head-on in the next 3 years? |
-| XI | Effectiveness Criteria | What constitutes "truly effective"? |
-| XII | Data & Trust | How do you avoid betraying user trust? |
-| XIII | Conceptual Framework | Design Thinking × Critical Thinking |
-| XIV | Final Conclusion | Is this path worth pursuing? |
 
 <br>
 
